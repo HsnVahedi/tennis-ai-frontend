@@ -1,0 +1,15 @@
+{
+    "name": "Tennis AI Frontend Development",
+    "dockerComposeFile": "../environments/dev/docker-compose.yml",
+    "service": "frontend",
+    "workspaceFolder": "/app",
+    "forwardPorts": [3000],
+    "build": {
+        "dockerCompose": {
+            "runServices": ["frontend"]
+        }
+    },
+    "overrideCommand": false,
+    "postCreateCommand": "echo 'Container ready!'"
+}
+

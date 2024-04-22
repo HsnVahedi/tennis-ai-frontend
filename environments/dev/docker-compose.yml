@@ -1,0 +1,23 @@
+services:
+#   backend:
+#     image: tennis-ai-back:prod
+#     networks:
+#       - backend
+
+  frontend:
+    # image: tennis-ai-front-2:dev
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../../:/app
+#     environment:
+#       - BACKEND_URL=http://backend:8080
+#     depends_on:
+#       - backend
+
+# networks:
+#   backend:
