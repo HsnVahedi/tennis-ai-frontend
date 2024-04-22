@@ -15,6 +15,9 @@ EXPOSE 3000
 # 3) Run the docker compose project: docker compose up
 FROM base as dev
 ENV NODE_ENV=development
+# Update apk and install git
+RUN apk update && \
+    apk add --no-cache git
 # Do nothing, just wait for frontend developers to run `npm run dev`
 CMD ["tail", "-f", "/dev/null"]
 # CMD npm run dev
