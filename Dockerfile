@@ -1,9 +1,4 @@
-# nextjs-starter was used to create a
-# nextjs project:
-# 1) Build the docker image: docker build --target nextjs-starter -t tennis-ai-front-starter .
-# 2) Change directory to `frontend`: cd ..
-# 3) Run a container interactively using the image: docker run -it -v $(pwd):/app tennis-ai-front-starter sh
-# 4) Run `npx create-next-app@latest` in the container to start a nextjs project
+# nextjs-starter was used to create a nextjs project
 FROM node:lts-alpine3.19 as nextjs-starter
 WORKDIR /app
 
