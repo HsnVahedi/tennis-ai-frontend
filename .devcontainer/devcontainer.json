@@ -10,6 +10,9 @@
         }
     },
     "overrideCommand": false,
-    "postCreateCommand": "echo 'Container ready!'"
+    "postCreateCommand": "echo 'Container ready!'",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
+    ]
 }
 
