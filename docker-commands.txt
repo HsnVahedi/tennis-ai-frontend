@@ -1,0 +1,5 @@
+# Build the development image
+docker build --target dev -t tennis-ai-front:dev .
+
+# Build the production image
+docker build --target prod -t tennis-ai-front:prod .
