@@ -21,6 +21,7 @@ services:
       - DATABASE_PASSWORD=db_password
       - DATABASE_NAME=tennis
       - DATABASE_PORT=5432
+    command: python manage.py runserver 0.0.0.0:8000
   db:
     image: postgres:alpine3.19
     environment:
