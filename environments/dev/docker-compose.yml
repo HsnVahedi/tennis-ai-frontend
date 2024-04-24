@@ -8,6 +8,7 @@ services:
       - "3000:3000"
     environment:
       - BACKEND_HOST=backend
+      - BACKEND_PORT=8000
   backend:
     image: hsndocker/tennis-ai-backend-prod:latest
     ports:
@@ -29,6 +30,6 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - tennis_ai_postgres_prod:/var/lib/postgresql/data
 volumes:
-  postgres_data:
+  tennis_ai_postgres_prod:
