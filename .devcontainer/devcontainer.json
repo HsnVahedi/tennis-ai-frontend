@@ -3,10 +3,6 @@
     "dockerComposeFile": "../environments/dev/docker-compose.yml",
     "workspaceFolder": "/app",
     "forwardPorts": [3000, 8000],
-    "build": {
-        "dockerCompose": {
-        }
-    },
     "overrideCommand": false,
     "postCreateCommand": "echo 'Container ready!'",
     "mounts": [
