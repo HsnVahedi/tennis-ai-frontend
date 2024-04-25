@@ -1,12 +1,12 @@
 {
     "name": "Tennis AI Frontend Development",
     "dockerComposeFile": "../environments/dev/docker-compose.yml",
-    "service": "frontend",
+    "service": "gateway",
     "workspaceFolder": "/app",
     "forwardPorts": [3000, 8000],
     "build": {
         "dockerCompose": {
-            "runServices": ["frontend", "backend", "db"]
+            "runServices": ["frontend", "backend", "db", "gateway"]
         }
     },
     "overrideCommand": false,
