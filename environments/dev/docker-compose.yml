@@ -5,6 +5,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${localWorkspaceFolder}:/app:cached
     command: /bin/sh -c "while sleep 1000; do :; done"
+    network_mode: service:db
   frontend:
     build:
       context: ../..
@@ -15,6 +16,7 @@ services:
     environment:
       - BACKEND_HOST=backend
       - BACKEND_PORT=8000
+    network_mode: service:db
   backend:
     image: hsndocker/tennis-ai-backend-prod:latest
     ports:
@@ -28,6 +30,7 @@ services:
       - DATABASE_NAME=tennis
       - DATABASE_PORT=5432
     command: /bin/sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    network_mode: service:db
   db:
     image: postgres:alpine3.19
     environment:
